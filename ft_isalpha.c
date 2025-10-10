@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibuil <ibuil@student.42madrid.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/10 13:34:40 by ibuil             #+#    #+#             */
-/*   Updated: 2025/10/10 13:42:08 by ibuil            ###   ########.fr       */
+/*   Created: 2025/10/10 12:39:25 by ibuil             #+#    #+#             */
+/*   Updated: 2025/10/10 12:44:21 by ibuil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <unistd.h>
-# include <stdlib.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-void	*ft_memset(void *b, int c, size_t len);
-
-#endif
+int	ft_isalpha(int c)
+{
+	if (!(c >= 'a' && c <= 'z') && !(c >= 'A' && c <= 'Z'))
+		return (0);
+	return (1);
+}
