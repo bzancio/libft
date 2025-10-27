@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibuil <ibuil@student.42madrid.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/10 13:34:40 by ibuil             #+#    #+#             */
-/*   Updated: 2025/10/27 10:34:11 by ibuil            ###   ########.fr       */
+/*   Created: 2025/10/27 10:32:57 by ibuil             #+#    #+#             */
+/*   Updated: 2025/10/27 10:33:56 by ibuil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <unistd.h>
-# include <stdlib.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-void	*ft_memset(void *b, int c, size_t len);
-
-#endif
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
+}

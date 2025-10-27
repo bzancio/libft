@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibuil <ibuil@student.42madrid.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/10 13:34:40 by ibuil             #+#    #+#             */
-/*   Updated: 2025/10/27 10:34:11 by ibuil            ###   ########.fr       */
+/*   Created: 2025/10/27 10:36:46 by ibuil             #+#    #+#             */
+/*   Updated: 2025/10/27 10:52:47 by ibuil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-void	*ft_memset(void *b, int c, size_t len);
-
-#endif
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i++;
+	}
+	if (s[i] == (char)c)
+		return ((char *)s + i);
+	return (NULL);
+}
